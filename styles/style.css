@@ -145,8 +145,6 @@ ol {
   width: 100%;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  width: 100%;
 }
 
 .content__accent {
@@ -318,15 +316,11 @@ ol {
   border: 1px solid #FFFFFF;
 }
 
-.more-button {
-  width: 100%;
-  margin-top: 10px;
-}
-
 .content__card-link {
   display: block;
   background-color: transparent;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .content__card-link_current {
@@ -353,7 +347,6 @@ ol {
   padding-right: 3px;
 }
 
-.content__card-link,
 .button,
 .search-form__submit-button,
 .search-form__pseudo-checkbox {
@@ -365,4 +358,5 @@ ol {
   border: 1px solid #FFFFFF;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }
