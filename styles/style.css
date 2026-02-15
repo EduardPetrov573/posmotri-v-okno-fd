@@ -9,13 +9,18 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
+  inline-size: 1140px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Oswald', 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1,
@@ -37,7 +42,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -48,4 +52,323 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  height: 534px;
+  gap: 30px;
+}
+
+.result {
+  width: 711px;
+  height: 456px;
+  margin-top: 78px;
+}
+
+.content__details {
+  width: 399px;
+  height: 534px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  height: 54px;
+  justify-content: space-between;
+  gap: 40px;
+  font-weight: 400;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.content__list-container {
+  position: relative;
+  overflow-y: auto;
+}
+
+.title {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.result__video-container {
+  position: relative;
+  width: 100%;
+  height: 386px;
+  overflow: hidden;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  height: 100px;
+  min-width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  line-height: 94%;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.content__card-link:hover {
+  color: #FFFFFF;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  width: 212px;
+}
+
+.search-form__fieldset {
+  border: none;
+  padding: 0;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 225px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-form__textfield {
+  appearance: none;
+  border: none;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  width: 100%;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form__label:has(:focus-visible) {
+  border: 2px solid #FFFFFF;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFFFFF;
+  padding: 1px;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__label {
+  cursor: pointer;
+}
+
+.search-form__textfield:hover {
+  text-decoration: none;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+  outline: 2px solid #FFFFFF;
+}
+
+.button {
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  width: 194px;
+  border: 1px solid #FFFFFF;
+}
+
+.more-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.content__card-link {
+  display: block;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 2px solid #FFFFFF;
+}
+
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.content__card-link,
+.button,
+.search-form__submit-button,
+.more-button,
+.search-form__pseudo-checkbox {
+  cursor: pointer;
+}
+
+.more-button {
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  font-weight: bold;
 }
