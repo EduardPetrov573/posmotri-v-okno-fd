@@ -59,19 +59,17 @@ ol {
   flex-direction: row;
   align-items: flex-end;
   width: 100%;
-  height: 534px;
   gap: 30px;
 }
 
 .result {
   width: 711px;
-  height: 456px;
   margin-top: 78px;
 }
 
 .content__details {
   width: 399px;
-  height: 534px;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -80,7 +78,6 @@ ol {
   display: flex;
   align-items: center;
   margin-top: 16px;
-  height: 54px;
   justify-content: space-between;
   gap: 40px;
   font-weight: 400;
@@ -90,20 +87,19 @@ ol {
 .content__list-container {
   position: relative;
   overflow-y: auto;
+  height: 298px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-bottom: 30px;
 }
 
 .result__video-container {
   position: relative;
   width: 100%;
   height: 386px;
-  overflow: hidden;
 }
 
 .result__video {
@@ -119,9 +115,10 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: 100px;
-  min-width: 150px;
+  width: 194px; 
+  height: 103px; 
   object-fit: cover;
+  flex-shrink: 0; 
   object-position: center;
 }
 
@@ -163,9 +160,9 @@ ol {
   font-size: 30px;
   text-transform: uppercase;
   color: #FFFFFF;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
 }
 
 .content__video-card-description {
@@ -173,11 +170,13 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   color: #FFFFFF;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
 }
 
 .visually-hidden {
@@ -216,8 +215,8 @@ ol {
   appearance: none;
   width: 20px;
   height: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -227,30 +226,33 @@ ol {
   border: none;
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: #1b1919;
+  color: #FFFFFF;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   width: 100%;
+  outline: none;
 }
 
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.search-form__label:has(:focus-visible) {
-  border: 2px solid #FFFFFF;
-}
+.search-form__label:has(:focus-visible) { 
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px; 
+} 
 
-.search-form__textfield:focus {
-  outline: none;
+.search-form__textfield:focus-visible {
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
 }
 
 .search-form__pseudo-checkbox {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #FFFFFF;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFFFFF;
   padding: 1px;
   cursor: pointer;
   position: relative;
@@ -261,7 +263,7 @@ ol {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -270,16 +272,12 @@ ol {
   opacity: 1;
 }
 
-.search-form__label:hover {
+.search-form__label-text:hover {
   text-decoration: underline;
 }
 
 .search-form__textfield:hover {
   text-decoration: none;
-}
-
-.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
-  outline: 2px solid #FFFFFF;
 }
 
 .button {
@@ -303,12 +301,13 @@ ol {
 }
 
 .button:focus {
-  outline: none;
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
   align-self: flex-end;
-  width: 194px;
+  min-width: 194px;
   border: 1px solid #FFFFFF;
 }
 
@@ -321,28 +320,19 @@ ol {
   color: #FFFFFF;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
-
 .content__card-link:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:focus {
   outline: none;
   display: block;
-  background-color: transparent;
   transition: background-color 0.3s;
 }
 
 .content__card-link:focus-visible {
-  outline: 2px solid #FFFFFF;
-}
-
-.content__list-item {
-  padding-left: 3px;
-  padding-right: 3px;
+  outline: 1px solid #FFFFFF;
 }
 
 .button,
@@ -351,10 +341,16 @@ ol {
   cursor: pointer;
 }
 
+
+.content__list-item {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
 .more-button {
-  width: 100%;
+  min-width: 390px;
   border: 1px solid #FFFFFF;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-left: 2px;
+  margin-bottom: 2px;
 }
