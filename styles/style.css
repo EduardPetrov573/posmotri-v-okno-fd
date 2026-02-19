@@ -162,7 +162,8 @@ ol {
   color: #FFFFFF;
   overflow: hidden; 
   text-overflow: ellipsis; 
-  white-space: nowrap; 
+  white-space: nowrap;
+  max-width: 196px;  
 }
 
 .content__video-card-description {
@@ -176,7 +177,6 @@ ol {
   color: #FFFFFF;
   overflow: hidden; 
   text-overflow: ellipsis; 
-  white-space: nowrap; 
 }
 
 .visually-hidden {
@@ -335,12 +335,17 @@ ol {
   outline: 1px solid #FFFFFF;
 }
 
+.content__card-link_current {
+  background-color: #545050; 
+  color: #FFFFFF; 
+  text-decoration: none; 
+}
+
 .button,
 .search-form__submit-button,
 .search-form__pseudo-checkbox {
   cursor: pointer;
 }
-
 
 .content__list-item {
   padding-left: 1px;
